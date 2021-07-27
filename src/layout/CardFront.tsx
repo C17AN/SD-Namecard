@@ -1,6 +1,4 @@
-import React, { ReactChild } from "react";
 import styled from "styled-components";
-import Slider from "@farbenmeer/react-spring-slider";
 
 import profile from "../images/profile/profile.png";
 import GitHubIcon from "../images/sns/github.svg";
@@ -15,7 +13,7 @@ const CardFront = () => {
   return (
     <Container>
       <UpperLayerContainer>
-        <Ribbon></Ribbon>
+        <Ribbon />
         <PhotoContainer src={profile} />
         <BioContainer>
           <Name>Chan-Min, Kim</Name>
