@@ -25,7 +25,6 @@ const Card = () => {
 };
 
 const CardContainer = styled.div`
-  border: 1px solid transparent;
   border-radius: 12px;
   width: 80vw;
   height: 50vh;

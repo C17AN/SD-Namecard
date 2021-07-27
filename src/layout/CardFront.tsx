@@ -15,6 +15,7 @@ const CardFront = () => {
   return (
     <Container>
       <UpperLayerContainer>
+        <Ribbon></Ribbon>
         <PhotoContainer src={profile} />
         <BioContainer>
           <Name>Chan-Min, Kim</Name>
@@ -64,11 +65,24 @@ const CardFront = () => {
 
 const Container = styled.div`
   padding: 2rem;
+  border: none;
 `;
 
 // 카드 상단 영역
 const UpperLayerContainer = styled.div`
   display: flex;
+`;
+
+const Ribbon = styled.span`
+  display: span;
+  position: absolute;
+  top: 0;
+  border-radius: 2px 2px 0 0;
+  right: 30px;
+  height: 80px;
+  width: 40px;
+  background-color: #c5d8e9;
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 50% 80%, 0% 100%);
 `;
 
 const PhotoContainer = styled.img`
