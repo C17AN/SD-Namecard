@@ -1,5 +1,3 @@
-import { useState } from "react";
-import { useSpring, animated } from "react-spring";
 import styled from "styled-components";
 import Card from "./component/Card";
 
