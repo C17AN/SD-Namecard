@@ -4,6 +4,10 @@ type company = {
   [company: string]: string;
 };
 
+type techStack = {
+  [index: string]: string;
+};
+
 interface config {
   name: string;
   company: string;
@@ -15,7 +19,9 @@ interface config {
     linkedin?: string;
     notion?: string;
   };
+
   techStack: {
+    [key: string]: any;
     html?: availableMastery;
     css?: availableMastery;
     sass?: availableMastery;
