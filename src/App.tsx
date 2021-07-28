@@ -23,7 +23,7 @@ const AppContainer = styled.div<{ theme: string }>`
   justify-content: center;
   align-items: center;
   height: 100%;
-  background: url(${(props) => props.theme}), linear-gradient(rgb(219, 166, 166), rgb(0, 0, 172));
+  background: url(${(props) => props.theme});
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;

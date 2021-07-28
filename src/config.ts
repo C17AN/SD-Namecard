@@ -21,7 +21,6 @@ const config: configType = {
   // tech : skill mastery (optional, value must be in 1 ~ 3)
   // all implemented skills list: types/configType.ts
   // + recommended 5 ~ 7 items to show
-
   techStack: {
     react: 3,
     javascript: 3,
@@ -31,7 +30,44 @@ const config: configType = {
     typescript: 1,
     docker: 1,
   },
-  career: [{ naver: "2027-19-19" }, { kakao: "2027102" }],
+  // Career: company name, from, to
+  career: [
+    {
+      name: "kakao",
+      from: "2019-12-31",
+      to: "2020-06-31",
+      position: "FE Developer",
+    },
+    {
+      name: "naver",
+      from: "2019-12-31",
+      to: "2020-06-31",
+      position: "FE Developer",
+    },
+    {
+      name: "naver",
+      from: "2019-12-31",
+      to: "2020-06-31",
+      position: "FE Developer",
+    },
+  ],
+  extra: [
+    {
+      name: "오픈소스 컨트리뷰톤",
+      year: "2020",
+      description: "정보통신산업진흥원장상",
+    },
+    {
+      name: "오픈소스 컨트리뷰톤",
+      year: "2020",
+      description: "정보통신산업진흥원장상",
+    },
+    {
+      name: "오픈소스 컨트리뷰톤",
+      year: "2020",
+      description: "정보통신산업진흥원장상",
+    },
+  ],
 };
 
 export default config;

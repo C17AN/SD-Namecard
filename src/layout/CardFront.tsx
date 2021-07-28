@@ -11,14 +11,13 @@ import HomePageIcon from "../images/sns/homepage.svg";
 import config from "../config";
 import TechItem from "../component/TechItem";
 import SnsItem from "../component/SnsItem";
+import Slider from "@farbenmeer/react-spring-slider";
 
 const CardFront = () => {
   const { name, company, description, sns, techStack } = config;
-  console.log(sns);
   return (
     <Container>
       <UpperLayerContainer>
-        <Ribbon />
         <PhotoContainer src={profile} />
         <BioContainer>
           <Name>{name}</Name>
@@ -57,23 +56,6 @@ const UpperLayerContainer = styled.div`
   display: flex;
   @media screen and (max-width: 768px) {
     flex-direction: column;
-  }
-`;
-
-const Ribbon = styled.span`
-  display: span;
-  position: absolute;
-  top: 0;
-  border-radius: 2px 2px 0 0;
-  right: 30px;
-  height: 80px;
-  width: 40px;
-  background-color: #c5d8e9;
-  clip-path: polygon(0 0, 100% 0%, 100% 100%, 50% 80%, 0% 100%);
-  @media screen and (max-width: 768px) {
-    /* display: none; */
-    right: 20px;
-    width: 30px;
   }
 `;
 
@@ -145,50 +127,6 @@ const SNSList = styled.ul`
   }
 `;
 
-const Github = styled.img<{ icon?: string }>`
-  width: 32px;
-  height: 32px;
-  background: url(${(props) => props.icon});
-  cursor: pointer;
-  margin-right: 14px;
-  transition: 0.2s ease-in-out;
-  &:hover {
-    transition: 0.2s ease-in-out;
-    filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.7));
-  }
-`;
-
-const Facebook = styled.img<{ icon?: string }>`
-  width: 32px;
-  height: 32px;
-  background: url(${(props) => props.icon});
-  cursor: pointer;
-  margin-right: 14px;
-`;
-
-const Instagram = styled.img<{ icon?: string }>`
-  width: 32px;
-  height: 32px;
-  background: url(${(props) => props.icon});
-  cursor: pointer;
-  margin-right: 14px;
-`;
-
-const LinkedIn = styled.img<{ icon?: string }>`
-  width: 32px;
-  height: 32px;
-  background: url(${(props) => props.icon});
-  cursor: pointer;
-  margin-right: 14px;
-`;
-
-const HomePage = styled.img<{ icon?: string }>`
-  width: 32px;
-  height: 32px;
-  background: url(${(props) => props.icon});
-  cursor: pointer;
-  margin-right: 14px;
-`;
 // 카드 하단 영역
 const LowerLayerContainer = styled.div`
   display: flex;
@@ -203,11 +141,17 @@ const TechStackLabel = styled.h3``;
 
 const TechStackList = styled.ul`
   margin-top: 12px;
+  display: flex;
   width: 100%;
   @media screen and (max-width: 768px) {
+    flex-direction: column;
     overflow-x: scroll;
+    margin-left: -8px;
+    padding: 0 8px;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 12px;
   }
-  display: flex;
 `;
 
 export default CardFront;

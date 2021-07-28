@@ -1,10 +1,13 @@
 import React, { useState } from "react";
+import { useMediaQuery } from "react-responsive";
 import styled from "styled-components";
-// import Icon from "../images/techs/react.svg";
 
 const TechItem = ({ tech, level }: { tech: string; level: number }) => {
   const [icon, setIcon] = useState("");
   const [color, setColor] = useState("");
+  const isMobile = useMediaQuery({
+    query: "(max-width: 768px)",
+  });
   import(`../images/techs/${tech}.svg`).then((module) => {
     const { default: icon } = module;
     setIcon(icon);
@@ -16,6 +19,7 @@ const TechItem = ({ tech, level }: { tech: string; level: number }) => {
   return (
     <Container color={color}>
       {icon && <TechLogo src={icon} fill={color} />}
+      {isMobile && <TechName>{tech[0].toUpperCase() + tech.slice(1)}</TechName>}
       <TechMastery>
         {[...Array(level)].map((_, idx) => (
           <Mastery key={idx} color={color} />
@@ -41,10 +45,31 @@ const Container = styled.li<{ color: string }>`
     background-color: white;
     box-shadow: 0px 2px 10px 5px ${(props) => props.color};
   }
+  @media screen and (max-width: 768px) {
+    /* min-width: 50px;
+    height: 80px; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 45px;
+    margin-top: 8px;
+    margin-right: 0;
+  }
 `;
 const TechLogo = styled.img<{ fill: string }>`
   margin: 8px;
-  fill: ${(props) => props.fill};
+  @media screen and (max-width: 768px) {
+    /* min-width: 50px;
+    height: 80px; */
+    width: 30px;
+    height: 30px;
+  }
+`;
+
+const TechName = styled.span`
+  font-size: 0.88rem;
+  color: #444;
 `;
 
 const TechMastery = styled.div`
@@ -54,6 +79,10 @@ const TechMastery = styled.div`
   border-right: transparent;
   border-left: transparent;
   height: 20px;
+  @media screen and (max-width: 768px) {
+    width: 60px;
+    margin-right: 8px;
+  }
 `;
 
 const Mastery = styled.div<{ color: string }>`

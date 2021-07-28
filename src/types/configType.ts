@@ -1,7 +1,16 @@
 type availableMastery = 1 | 2 | 3;
 
-type company = {
-  [company: string]: string;
+export type companyType = {
+  name: string;
+  from: string;
+  to?: string;
+  position?: string;
+};
+
+export type extraType = {
+  name: string;
+  year: string;
+  description?: string;
 };
 
 interface config {
@@ -77,7 +86,8 @@ interface config {
     kubernetes?: availableMastery;
     ansible?: availableMastery;
   };
-  career: Array<company>;
+  career: Array<companyType>;
+  extra: Array<extraType>;
 }
 
 export default config;
