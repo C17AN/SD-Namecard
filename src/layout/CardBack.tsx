@@ -11,9 +11,9 @@ const CardBack = () => {
     console.log("hi");
   }, []);
   return (
-    <Container>
+    <Container className="back-container">
       <LeftLayerContainer>
-        <h3>경력</h3>
+        <h3>교육 & 경력</h3>
         <CareerList>
           {career.map((careerData: companyType) => (
             <CareerItem careerInfo={careerData} />
@@ -35,7 +35,6 @@ const CardBack = () => {
 const Container = styled.div`
   display: flex;
   padding: 2rem;
-  max-height: 500px;
   @media screen and (max-width: 768px) {
     flex-direction: column;
     align-items: flex-start;
@@ -48,7 +47,7 @@ const LeftLayerContainer = styled.div`
   display: flex;
   flex-direction: column;
   height: 100%;
-  min-height: 300px;
+  max-height: 300px;
   flex: 1;
   border-right: 1px solid #cdcdcd;
   @media screen and (max-width: 768px) {
@@ -64,6 +63,7 @@ const CareerList = styled.ul`
   display: flex;
   flex-direction: column;
   margin-top: 8px;
+  overflow-y: scroll;
   @media screen and (max-width: 768px) {
     margin: 4px 0 12px 0;
   }
@@ -73,6 +73,7 @@ const ExtraList = styled.ul`
   display: flex;
   flex-direction: column;
   margin-top: 8px;
+  overflow-y: scroll;
   @media screen and (max-width: 768px) {
     margin: 4px 0 12px 0;
   }
@@ -83,6 +84,7 @@ const RightLayerContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin-left: 2rem;
+  max-height: 300px;
   flex: 1;
   @media screen and (max-width: 768px) {
     margin-left: 0;

@@ -45,6 +45,7 @@ const CardFront = () => {
 const Container = styled.div`
   padding: 2rem;
   border: none;
+  height: 100%;
   @media screen and (max-width: 768px) {
     padding: 12px;
     overflow-y: hidden;

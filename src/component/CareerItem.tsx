@@ -19,12 +19,13 @@ const CareerContainer = styled.li`
   list-style: none;
   margin-top: 8px;
   h2 {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
   }
 `;
 
 const Period = styled.div`
   font-size: 0.75rem;
+  margin: 4px 0 2px 0;
 `;
 
 const Position = styled.div`

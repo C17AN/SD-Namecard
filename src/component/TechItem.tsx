@@ -60,8 +60,6 @@ const Container = styled.li<{ color: string }>`
 const TechLogo = styled.img<{ fill: string }>`
   margin: 8px;
   @media screen and (max-width: 768px) {
-    /* min-width: 50px;
-    height: 80px; */
     width: 30px;
     height: 30px;
   }

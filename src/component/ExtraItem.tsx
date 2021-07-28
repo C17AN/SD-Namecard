@@ -22,6 +22,7 @@ const ExtraContainer = styled.li`
 
 const Year = styled.h3`
   font-size: 0.88rem;
+  width: 48px;
   display: inline-flex;
   justify-content: center;
   align-items: center;

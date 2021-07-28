@@ -12,6 +12,12 @@ const Card = () => {
     infinite: false,
     speed: 500,
     arrows: isMobile ? false : true,
+    onSwipe: () => {
+      const slick = document.querySelector(".slick-track") as HTMLElement;
+      if (slick) {
+        slick.style.height = "300px !important";
+      }
+    },
   };
   return (
     <CardContainer>
@@ -28,8 +34,9 @@ const CardContainer = styled.div`
   border-radius: 12px;
   width: 80vw;
   height: 50vh;
-  min-height: 350px;
+  max-height: 350px;
   max-width: 600px;
+  border: 3px solid #90abc461;
   background-color: rgba(255, 255, 255, 0.72);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);

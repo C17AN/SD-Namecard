@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 import Card from "./component/Card";
 import config from "./config";
@@ -13,7 +13,7 @@ function App() {
 
   return (
     <AppContainer theme={background}>
-      <Card></Card>
+      <Card />
     </AppContainer>
   );
 }
