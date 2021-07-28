@@ -19,8 +19,8 @@ const config: configType = {
   },
 
   // background theme
-  //  | "icecream" | "ocean" | "sky" | "tropica" | "rainbow" | "blossom" | "bloom" | "mirror" | "beach"
-  theme: "ocean",
+  // "icecream" | "ocean" | "sky" | "tropica" | "rainbow" | "blossom" | "bloom" | "mirror" | "beach"
+  theme: "icecream",
 
   // tech : skill mastery (optional, value must be in 1 ~ 3)
   // + recommended 7 > items to show
