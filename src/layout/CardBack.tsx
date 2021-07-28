@@ -7,7 +7,7 @@ const CardBack = () => {
         <h3>경력</h3>
       </LeftLayerContainer>
       <RightLayerContainer>
-        <h3>회사</h3>
+        <h3>특이사항</h3>
       </RightLayerContainer>
     </Container>
   );

@@ -6,7 +6,7 @@ const config: configType = {
   // set your school or company
   company: "한국항공대학교 소프트웨어학과",
   // one-line description about you
-  description: "무한한 호기심을 가지고, 계속해서 성장하는 개발자가 되려 합니다.",
+  description: "무한한 호기심과 함께 계속해서 성장하는 개발자가 되려 합니다.",
   // social network service link (optional)
   sns: {
     github: "https://github.com/C17AN",

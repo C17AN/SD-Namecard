@@ -3,7 +3,6 @@ import styled from "styled-components";
 
 const SnsItem = ({ name, link }: { name: string; link: string }) => {
   const [icon, setIcon] = useState("");
-  console.log(name, link);
   import(`../images/sns/${name}.svg`).then((module) => {
     const { default: Icon } = module;
     setIcon(Icon);
