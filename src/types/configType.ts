@@ -8,7 +8,7 @@ interface config {
   name: string;
   company: string;
   description: string;
-  sns?: {
+  sns: {
     [key: string]: any;
     facebook?: string;
     github?: string;

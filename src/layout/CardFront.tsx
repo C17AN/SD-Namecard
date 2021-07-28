@@ -14,6 +14,7 @@ import SnsItem from "../component/SnsItem";
 
 const CardFront = () => {
   const { name, company, description, sns, techStack } = config;
+  console.log(sns);
   return (
     <Container>
       <UpperLayerContainer>
@@ -24,39 +25,9 @@ const CardFront = () => {
           <Company>{company}</Company>
           <Description>{description}</Description>
           <SNSList>
-            {sns &&
-              Object.keys(sns).map((serviceName) => {
-                <SnsItem name={serviceName} link={sns[serviceName]} />;
-              })}
-
-            <a href="https://github.com" target="_blank">
-              <Github src={GitHubIcon} alt="Github" />
-            </a>
-            <Notion
-              src={NotionIcon}
-              alt="Notion"
-              onClick={() => window.history.pushState({}, "", "https://github.com/")}
-            />
-            <Facebook
-              src={FacebookIcon}
-              alt="Notion"
-              onClick={() => window.history.pushState({}, "", "https://github.com/")}
-            />
-            <Instagram
-              src={InstagramIcon}
-              alt="Notion"
-              onClick={() => window.history.pushState({}, "", "https://github.com/")}
-            />
-            <LinkedIn
-              src={LinkedInIcon}
-              alt="LinkedIn"
-              onClick={() => window.history.pushState({}, "", "https://github.com/")}
-            />
-            <HomePage
-              src={HomePageIcon}
-              alt="Homepage"
-              onClick={() => window.history.pushState({}, "", "https://github.com/")}
-            />
+            {Object.keys(sns).map((serviceName) => (
+              <SnsItem key={serviceName} name={serviceName} link={sns[serviceName]} />
+            ))}
           </SNSList>
         </BioContainer>
       </UpperLayerContainer>
@@ -64,7 +35,7 @@ const CardFront = () => {
         <TechStackLabel>기술 스택</TechStackLabel>
         <TechStackList>
           {Object.keys(techStack).map((item: string) => (
-            <TechItem tech={item} level={techStack[item]} />
+            <TechItem key={item} tech={item} level={techStack[item]} />
           ))}
         </TechStackList>
       </LowerLayerContainer>
@@ -162,7 +133,7 @@ const Description = styled.h5`
   }
 `;
 
-const SNSList = styled.li`
+const SNSList = styled.ul`
   display: flex;
   margin-top: 15px;
   height: 100%;
@@ -181,20 +152,6 @@ const Github = styled.img<{ icon?: string }>`
   cursor: pointer;
   margin-right: 14px;
   transition: 0.2s ease-in-out;
-  &:hover {
-    transition: 0.2s ease-in-out;
-    filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.7));
-  }
-`;
-
-const Notion = styled.img<{ icon?: string }>`
-  width: 32px;
-  height: 32px;
-  background: url(${(props) => props.icon});
-  cursor: pointer;
-  margin-right: 14px;
-  transition: 0.2s ease-in-out;
-
   &:hover {
     transition: 0.2s ease-in-out;
     filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.7));

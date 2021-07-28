@@ -9,14 +9,15 @@ const config: configType = {
   description: "무한한 호기심을 가지고, 계속해서 성장하는 개발자가 되려 합니다.",
   // social network service link (optional)
   sns: {
-    // github: "",
-    // facebook: "",
+    github: "https://github.com/C17AN",
+    // homepage: "",
+    notion: "j",
+    facebook: "d",
     // instagram: "",
     // linkedin: "",
-    // notion: ""
   },
   // background theme
-  theme: "bloom",
+  theme: "icecream",
   // tech : skill mastery (optional, value must be in 1 ~ 3)
   // all implemented skills list: types/configType.ts
   // + recommended 5 ~ 7 items to show
