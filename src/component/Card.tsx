@@ -44,6 +44,7 @@ const CardContainer = styled.div`
   @media screen and (max-width: 768px) {
     padding: 1rem;
     overflow-y: scroll;
+    max-height: 500px;
   }
 `;
 

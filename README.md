@@ -1,3 +1,3 @@
-# 개발자 디지털 명함 템플릿 (WIP)
+# Simple Developer Namecard Template
 
 ![스크린샷](./screenshot.png)

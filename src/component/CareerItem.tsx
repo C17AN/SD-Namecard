@@ -17,7 +17,7 @@ const CareerItem = ({ careerInfo }: { careerInfo: companyType }) => {
 
 const CareerContainer = styled.li`
   list-style: none;
-  margin-top: 8px;
+  margin-top: 12px;
   h2 {
     font-size: 1.05rem;
   }

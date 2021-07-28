@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 import styled from "styled-components";
 import Card from "./component/Card";
 import config from "./config";
 
 function App() {
-  const { theme } = config;
+  const { name, theme } = config;
   const [background, setBackground] = useState("");
   import(`./images/background/${theme}.svg`).then((module) => {
     const { default: theme } = module;
@@ -12,9 +13,15 @@ function App() {
   });
 
   return (
-    <AppContainer theme={background}>
-      <Card />
-    </AppContainer>
+    <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>{name}'s namecard</title>
+      </Helmet>
+      <AppContainer theme={background}>
+        <Card />
+      </AppContainer>
+    </>
   );
 }
 

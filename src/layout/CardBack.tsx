@@ -7,9 +7,7 @@ import { companyType, extraType } from "../types/configType";
 
 const CardBack = () => {
   const { career, extra } = config;
-  useEffect(() => {
-    console.log("hi");
-  }, []);
+
   return (
     <Container className="back-container">
       <LeftLayerContainer>
@@ -20,6 +18,7 @@ const CardBack = () => {
           ))}
         </CareerList>
       </LeftLayerContainer>
+
       <RightLayerContainer>
         <h3>부가 정보</h3>
         <ExtraList>
@@ -47,7 +46,7 @@ const LeftLayerContainer = styled.div`
   display: flex;
   flex-direction: column;
   height: 100%;
-  max-height: 300px;
+  height: 300px;
   flex: 1;
   border-right: 1px solid #cdcdcd;
   @media screen and (max-width: 768px) {
@@ -84,7 +83,7 @@ const RightLayerContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin-left: 2rem;
-  max-height: 300px;
+  height: 300px;
   flex: 1;
   @media screen and (max-width: 768px) {
     margin-left: 0;
