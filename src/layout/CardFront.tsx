@@ -6,12 +6,14 @@ import NotionIcon from "../images/sns/notion.svg";
 import FacebookIcon from "../images/sns/facebook.svg";
 import InstagramIcon from "../images/sns/instagram.svg";
 import LinkedInIcon from "../images/sns/linkedin.svg";
+import HomePageIcon from "../images/sns/homepage.svg";
 
 import config from "../config";
 import TechItem from "../component/TechItem";
+import SnsItem from "../component/SnsItem";
 
 const CardFront = () => {
-  const { name, company, description, techStack } = config;
+  const { name, company, description, sns, techStack } = config;
   return (
     <Container>
       <UpperLayerContainer>
@@ -22,6 +24,11 @@ const CardFront = () => {
           <Company>{company}</Company>
           <Description>{description}</Description>
           <SNSList>
+            {sns &&
+              Object.keys(sns).map((serviceName) => {
+                <SnsItem name={serviceName} link={sns[serviceName]} />;
+              })}
+
             <a href="https://github.com" target="_blank">
               <Github src={GitHubIcon} alt="Github" />
             </a>
@@ -43,6 +50,11 @@ const CardFront = () => {
             <LinkedIn
               src={LinkedInIcon}
               alt="LinkedIn"
+              onClick={() => window.history.pushState({}, "", "https://github.com/")}
+            />
+            <HomePage
+              src={HomePageIcon}
+              alt="Homepage"
               onClick={() => window.history.pushState({}, "", "https://github.com/")}
             />
           </SNSList>
@@ -213,6 +225,13 @@ const LinkedIn = styled.img<{ icon?: string }>`
   margin-right: 14px;
 `;
 
+const HomePage = styled.img<{ icon?: string }>`
+  width: 32px;
+  height: 32px;
+  background: url(${(props) => props.icon});
+  cursor: pointer;
+  margin-right: 14px;
+`;
 // 카드 하단 영역
 const LowerLayerContainer = styled.div`
   display: flex;

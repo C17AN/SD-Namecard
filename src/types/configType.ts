@@ -3,11 +3,13 @@ type availableMastery = 1 | 2 | 3;
 type company = {
   [company: string]: string;
 };
+
 interface config {
   name: string;
   company: string;
   description: string;
   sns?: {
+    [key: string]: any;
     facebook?: string;
     github?: string;
     instagram?: string;
