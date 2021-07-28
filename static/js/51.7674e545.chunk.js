@@ -1,0 +1,2 @@
+(this["webpackJsonpdigital-card"]=this["webpackJsonpdigital-card"]||[]).push([[51],{91:function(a,t,i){"use strict";i.r(t),t.default=i.p+"static/media/react.7334ea34.svg"}}]);
+//# sourceMappingURL=51.7674e545.chunk.js.map

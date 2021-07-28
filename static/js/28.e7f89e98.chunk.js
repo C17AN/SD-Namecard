@@ -1,0 +1,2 @@
+(this["webpackJsonpdigital-card"]=this["webpackJsonpdigital-card"]||[]).push([[28],{68:function(t,a,i){"use strict";i.r(a),a.default=i.p+"static/media/flutter.ca09a85b.svg"}}]);
+//# sourceMappingURL=28.e7f89e98.chunk.js.map
