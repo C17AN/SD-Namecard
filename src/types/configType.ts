@@ -3,11 +3,6 @@ type availableMastery = 1 | 2 | 3;
 type company = {
   [company: string]: string;
 };
-
-type techStack = {
-  [index: string]: string;
-};
-
 interface config {
   name: string;
   company: string;
@@ -19,6 +14,17 @@ interface config {
     linkedin?: string;
     notion?: string;
   };
+  theme:
+    | "icecream"
+    | "forest"
+    | "ocean"
+    | "sky"
+    | "tropica"
+    | "rainbow"
+    | "blossom"
+    | "bloom"
+    | "mirror"
+    | "beach";
 
   techStack: {
     [key: string]: any;

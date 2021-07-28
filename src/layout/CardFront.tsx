@@ -6,8 +6,7 @@ import NotionIcon from "../images/sns/notion.svg";
 import FacebookIcon from "../images/sns/facebook.svg";
 import InstagramIcon from "../images/sns/instagram.svg";
 import LinkedInIcon from "../images/sns/linkedin.svg";
-import ReactItem from "../component/TechStack/ReactItem";
-import NodeItem from "../component/TechStack/NodeItem";
+
 import config from "../config";
 import TechItem from "../component/TechItem";
 
@@ -53,10 +52,8 @@ const CardFront = () => {
         <TechStackLabel>기술 스택</TechStackLabel>
         <TechStackList>
           {Object.keys(techStack).map((item: string) => (
-            <TechItem level={techStack[item]} />
+            <TechItem tech={item} level={techStack[item]} />
           ))}
-          <ReactItem level={1} />
-          <NodeItem level={2} />
         </TechStackList>
       </LowerLayerContainer>
     </Container>
@@ -91,7 +88,9 @@ const Ribbon = styled.span`
   background-color: #c5d8e9;
   clip-path: polygon(0 0, 100% 0%, 100% 100%, 50% 80%, 0% 100%);
   @media screen and (max-width: 768px) {
-    display: none;
+    /* display: none; */
+    right: 20px;
+    width: 30px;
   }
 `;
 
@@ -228,6 +227,10 @@ const TechStackLabel = styled.h3``;
 
 const TechStackList = styled.ul`
   margin-top: 12px;
+  width: 100%;
+  @media screen and (max-width: 768px) {
+    overflow-x: scroll;
+  }
   display: flex;
 `;
 

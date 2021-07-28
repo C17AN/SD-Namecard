@@ -1,37 +1,50 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
-import Icon from "../images/techs/react.svg";
+// import Icon from "../images/techs/react.svg";
 
-const TechItem = ({ level }: { level: number }) => {
+const TechItem = ({ tech, level }: { tech: string; level: number }) => {
+  const [icon, setIcon] = useState("");
+  const [color, setColor] = useState("");
+  import(`../images/techs/${tech}.svg`).then((module) => {
+    const { default: icon } = module;
+    setIcon(icon);
+  });
+  import(`../constant/logoColor`).then((module) => {
+    const { default: colors } = module;
+    setColor(colors[tech]);
+  });
   return (
-    <Container>
-      <TechLogo src={Icon}></TechLogo>
+    <Container color={color}>
+      {icon && <TechLogo src={icon} fill={color} />}
       <TechMastery>
         {[...Array(level)].map((_, idx) => (
-          <Mastery key={idx} />
+          <Mastery key={idx} color={color} />
         ))}
       </TechMastery>
     </Container>
   );
 };
 
-const Container = styled.li`
+const Container = styled.li<{ color: string }>`
   list-style: none;
   transition: 0.2s ease-in-out;
   border: 1px solid rgba(90, 90, 90, 0.2);
   border-radius: 12px 12px 8px 8px;
   margin-right: 16px;
-  width: 60px;
+  margin-bottom: 10px;
+  min-width: 60px;
   height: 96px;
   cursor: pointer;
   box-shadow: 1px 2px 5px 2px #cdcdcd;
   &:hover {
-    transition: 0.2s ease-in-out;
+    transition: 0.3s ease-in-out;
     background-color: white;
+    box-shadow: 0px 2px 10px 5px ${(props) => props.color};
   }
 `;
-const TechLogo = styled.img`
+const TechLogo = styled.img<{ fill: string }>`
   margin: 8px;
+  fill: ${(props) => props.fill};
 `;
 
 const TechMastery = styled.div`
@@ -43,16 +56,10 @@ const TechMastery = styled.div`
   height: 20px;
 `;
 
-// const Mastery = styled.div`
-//   width: 60%;
-//   height: 100%;
-//   background-color: #61dafb;
-// `;
-
-const Mastery = styled.div`
+const Mastery = styled.div<{ color: string }>`
   width: 12px;
   height: 12px;
-  background-color: #61dafb;
+  background-color: ${(props) => props.color};
   clip-path: polygon(
     50% 0%,
     69% 30%,

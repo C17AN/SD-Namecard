@@ -1,15 +1,4 @@
-import React, { ReactChild } from "react";
 import styled from "styled-components";
-import Slider from "@farbenmeer/react-spring-slider";
-
-import profile from "../images/profile/profile.png";
-import GitHubIcon from "../images/sns/github.svg";
-import NotionIcon from "../images/sns/notion.svg";
-import FacebookIcon from "../images/sns/facebook.svg";
-import InstagramIcon from "../images/sns/instagram.svg";
-import LinkedInIcon from "../images/sns/linkedin.svg";
-import ReactItem from "../component/TechStack/ReactItem";
-import NodeItem from "../component/TechStack/NodeItem";
 
 const CardBack = () => {
   return (
