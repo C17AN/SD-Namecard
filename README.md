@@ -104,7 +104,17 @@ Netlify와 Github pages를 통한 배포가 가능합니다.
 
 ### 방법 2. Github pages로 배포하기
 
-1. `package.json` 의 `homepage` 키의 값을 `"https://<사용자명>.github.io/digital-namecard"` 로 변경합니다.
+1. `package.json` 에 `homepage` 속성을 추가하고, `"https://<사용자명>.github.io/digital-namecard"` 값을 설정합니다.
+
+#### **package.json 예시**
+
+```json
+{
+    "homepage": "https://c17an.github.io/digital-namecard",
+    "name": "digital-namecard",
+    ...
+}
+```
 
 2. `yarn deploy` 또는 `npm run deploy` 커맨드로 배포하면, `homepage` 에 지정한 경로에 프로필 카드가 배포됩니다.
 
