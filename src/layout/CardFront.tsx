@@ -9,7 +9,7 @@ const CardFront = () => {
   return (
     <Container>
       <UpperLayerContainer>
-        <PhotoContainer src={profile} />
+        <PhotoContainer src={profile} loading="lazy" />
         <BioContainer>
           <Name>{name}</Name>
           <Company>{company}</Company>
