@@ -2,7 +2,14 @@
 👨🏻‍💻 Simple Developer Namecard Template 💳
 </h1>
 
-![pr](https://camo.githubusercontent.com/b0ad703a46e8b249ef2a969ab95b2cb361a2866ecb8fe18495a2229f5847102d/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f5052732d77656c636f6d652d627269676874677265656e2e737667)
+<p align="center">
+    <a href="https://github.com/C17AN/digital-namecard/pulls" target="_blank">
+      <img src="https://camo.githubusercontent.com/b0ad703a46e8b249ef2a969ab95b2cb361a2866ecb8fe18495a2229f5847102d/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f5052732d77656c636f6d652d627269676874677265656e2e737667" alt="PR" />
+    </a>
+    <a href="https://app.netlify.com/" target="_blank">
+      <img src="https://api.netlify.com/api/v1/badges/6a12553e-f7e6-43ca-9ff4-26a0fcd296d6/deploy-status" alt="netlify" />
+    </a>
+</p>
 
 ![스크린샷](https://user-images.githubusercontent.com/26535030/127426026-51e51443-863f-4f0d-99f1-ce1e943d9c35.png)
 
@@ -83,6 +90,26 @@ SNS는 `github` | `notion` | `facebook` | `instagram` | `linkedin` | 개인 홈�
 },
 ```
 
-## 🚀 깃허브 페이지 배포 가이드
+## 🚀 배포 가이드
 
-netlify에는 즉시 배포가 가능하며,
+Netlify와 Github pages를 통한 배포가 가능합니다.
+
+### 방법 1. Netlify로 배포하기
+
+1. Netlify 가입 후, **[New site from Git]** 을 선택해 포크한 저장소를 연결합니다. ![이미지](https://user-images.githubusercontent.com/26535030/127438344-94265c0b-a1f7-44b9-8a39-7d2ff3c4aa13.png)
+
+2. 저장소를 연결하면, 자동으로 배포가 완료됩니다.
+3. 도메인을 원하는 이름으로 변경하고 싶다면 **[Site settings]** - **[Change Site Name]** 으로 변경할 수 있습니다.![이미지](https://user-images.githubusercontent.com/26535030/127438760-14fbfb38-52ba-4c6a-b5cb-3aa5bb7516e5.png)
+   ![이미지](https://user-images.githubusercontent.com/26535030/127439001-77695e3b-2d31-4d91-aa56-cebc4522710e.png)
+
+### 방법 2. Github pages로 배포하기
+
+1. `package.json` 의 `homepage` 키의 값을 `"https://<사용자명>.github.io/digital-namecard"` 로 변경합니다.
+
+2. `yarn deploy` 또는 `npm run deploy` 커맨드로 배포하면, `homepage` 에 지정한 경로에 프로필 카드가 배포됩니다.
+
+## 🤖 라이센스
+
+코드는 자유롭게 수정해 사용하실 수 있으며, 따로 출처를 남기지 않으셔도 괜찮습니다!
+
+즐겨주세요!
