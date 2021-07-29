@@ -7,7 +7,7 @@
       <img src="https://camo.githubusercontent.com/b0ad703a46e8b249ef2a969ab95b2cb361a2866ecb8fe18495a2229f5847102d/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f5052732d77656c636f6d652d627269676874677265656e2e737667" alt="PR" />
     </a>
     <a href="https://app.netlify.com/" target="_blank">
-      <img src="https://api.netlify.com/api/v1/badges/6a12553e-f7e6-43ca-9ff4-26a0fcd296d6/deploy-status" alt="netlify" />
+      <img src="https://api.netlify.com/api/v1/badges/fa9e4695-53a0-4bc1-8564-026e9f740982/deploy-status" alt="netlify" />
     </a>
 </p>
 
