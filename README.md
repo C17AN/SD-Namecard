@@ -12,6 +12,7 @@
 </p>
 
 ![스크린샷](https://user-images.githubusercontent.com/26535030/127426026-51e51443-863f-4f0d-99f1-ce1e943d9c35.png)
+![스크린샷](https://user-images.githubusercontent.com/26535030/127443062-c6be0e59-b3b3-451c-9f33-2b401c4589bd.png)
 
 ## ☺️ 소개
 
