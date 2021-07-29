@@ -1,17 +1,8 @@
 import styled from "styled-components";
-
 import profile from "../images/profile/profile.png";
-import GitHubIcon from "../images/sns/github.svg";
-import NotionIcon from "../images/sns/notion.svg";
-import FacebookIcon from "../images/sns/facebook.svg";
-import InstagramIcon from "../images/sns/instagram.svg";
-import LinkedInIcon from "../images/sns/linkedin.svg";
-import HomePageIcon from "../images/sns/homepage.svg";
-
 import config from "../config";
 import TechItem from "../component/TechItem";
 import SnsItem from "../component/SnsItem";
-import Slider from "@farbenmeer/react-spring-slider";
 
 const CardFront = () => {
   const { name, company, description, sns, techStack } = config;

@@ -10,7 +10,7 @@ const SnsItem = ({ name, link }: { name: string; link: string }) => {
 
   return (
     <SNSContainer>
-      <a href={link} target="_blank">
+      <a href={link} target="_blank" rel="noreferrer">
         <SNSIcon src={icon} alt={name} />
       </a>
     </SNSContainer>

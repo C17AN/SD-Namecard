@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import styled from "styled-components";
 import CareerItem from "../component/CareerItem";
 import ExtraItem from "../component/ExtraItem";
