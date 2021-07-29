@@ -2,8 +2,6 @@
 👨🏻‍💻 Simple Developer Namecard Template 💳
 </h1>
 
-[데모 링크](c17an-profile.netlify.app/)
-
 <p align="center">
     <a href="https://github.com/C17AN/digital-namecard/pulls" target="_blank">
       <img src="https://camo.githubusercontent.com/b0ad703a46e8b249ef2a969ab95b2cb361a2866ecb8fe18495a2229f5847102d/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f5052732d77656c636f6d652d627269676874677265656e2e737667" alt="PR" />
@@ -12,6 +10,9 @@
       <img src="https://api.netlify.com/api/v1/badges/fa9e4695-53a0-4bc1-8564-026e9f740982/deploy-status" alt="netlify" />
     </a>
 </p>
+
+
+[데모 링크](c17an-profile.netlify.app/)
 
 ![스크린샷](https://user-images.githubusercontent.com/26535030/127426026-51e51443-863f-4f0d-99f1-ce1e943d9c35.png)
 ![스크린샷](https://user-images.githubusercontent.com/26535030/127443062-c6be0e59-b3b3-451c-9f33-2b401c4589bd.png)
